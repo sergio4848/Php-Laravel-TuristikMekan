@@ -49,12 +49,10 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#pablo">
-                        <i class="now-ui-icons users_single-02"></i>
-                        <p>
-                            <span class="d-lg-none d-md-block">Account</span>
-                        </p>
-                    </a>
+                    @auth
+                    <a class="nav-link" href="#pablo"><i class="now-ui-icons users_single-02"></i>{{Auth::user()->name}}</a>
+                        <a href="{{route('admin_logout')}}">Logout</a>
+                    @endauth
                 </li>
             </ul>
         </div>
