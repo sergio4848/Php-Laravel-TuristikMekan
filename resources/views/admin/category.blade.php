@@ -8,8 +8,12 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
+                    <button href="{{route('admin_category_add')}}" style="position: absolute; right: 25px; background-color: #00bbff;" class="now-ui-icons ui-1_simple-add">Kategori Ekle</button>
+
                     <h5 class="title">Kategoriler</h5>
+
                     <p class="category">Kategoriler Listesini Görüntülemektesiniz.</p>
+
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -44,7 +48,7 @@
                                     Edit
                                 </td>
                                 <td>
-                                    Delete
+                                    <a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a>
                                 </td>
                             </tr>
 

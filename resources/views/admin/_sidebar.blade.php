@@ -27,7 +27,7 @@
             <li>
                 <a href="./map.html">
                     <i class="now-ui-icons location_map-big"></i>
-                    <p>Ürünler</p>
+                    <p>Mekanlar</p>
                 </a>
             </li>
 
