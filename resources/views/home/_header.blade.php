@@ -15,7 +15,7 @@
                     <nav>
                         <ul class="nav topnav">
                             <li class="active">
-                                <a href="index.html"><i class="icon-home"></i> Home </a>
+                                <a href="index.html"><i class="icon-home"></i> Ana Sayfa </a>
                             </li>
                             <li class="dropdown">
                                 <a href="#"><i class="icon-cog"></i> Features <i class="icon-angle-down"></i></a>
