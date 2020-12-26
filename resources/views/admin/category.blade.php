@@ -45,7 +45,7 @@
                                     {{$rs->status}}
                                 </td>
                                 <td>
-                                    Edit
+                                    <a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Edit</a>
                                 </td>
                                 <td>
                                     <a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a>

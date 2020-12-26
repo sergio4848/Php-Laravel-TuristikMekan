@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Admin Panel Home Page')
+@section('title','Kategori Ekle')
 
 @section('content')
 <div class="content">
