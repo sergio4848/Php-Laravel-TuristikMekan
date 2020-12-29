@@ -39,6 +39,19 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('category/delete/{id}',[\App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
     Route::get('category/show',[\App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
 
+
+    #Places
+    Route::prefix('place')->group(function (){
+        Route::get('/',[\App\Http\Controllers\Admin\PlaceController::class,'index'])->name('admin_places');
+        Route::get('create',[\App\Http\Controllers\Admin\PlaceController::class,'create'])->name('admin_place_create');
+        Route::post('store',[\App\Http\Controllers\Admin\PlaceController::class,'store'])->name('admin_place_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\PlaceController::class,'edit'])->name('admin_place_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\PlaceController::class,'update'])->name('admin_place_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\PlaceController::class,'destroy'])->name('admin_place_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\PlaceController::class,'show'])->name('admin_place_show');
+
+    });
+
 });
 
 

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Kategoriler Listesi')
+@section('title','Mekanlar Listesi')
 
 @section('content')
 <div class="content">
@@ -8,11 +8,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{route('admin_category_add')}}" style="position: absolute; right: 25px; background-color: #00bbff;">Kategori Ekle</a>
+                    <a href="{{route('admin_place_create')}}" style="position: absolute; right: 25px; background-color: #00bbff;" class="now-ui-icons ui-1_simple-add">Mekan Ekle</a>
 
-                    <h5 class="title">Kategoriler</h5>
+                    <h5 class="title">Mekanlar</h5>
 
-                    <p class="category">Kategoriler Listesini Görüntülemektesiniz.</p>
+                    <p class="category">Mekanlar Listesini Görüntülemektesiniz.</p>
 
                 </div>
                 <div class="card-body">
@@ -20,8 +20,9 @@
                         <table class="table">
                             <thead class=" text-primary">
                             <th>Id</th>
-                            <th>Parent</th>
+                            <th>Category</th>
                             <th>Title</th>
+                            <th>Image</th>
                             <th>Status</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -36,19 +37,22 @@
                                     {{$rs->id}}
                                 </td>
                                 <td>
-                                    {{$rs->parent_id}}
+                                    {{$rs->category_id}}
                                 </td>
                                 <td>
                                     {{$rs->title}}
                                 </td>
                                 <td>
+                                    {{$rs->image}}
+                                </td>
+                                <td>
                                     {{$rs->status}}
                                 </td>
                                 <td>
-                                    <a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Edit</a>
+                                    <a href="{{route('admin_place_edit',['id'=>$rs->id])}}">Edit</a>
                                 </td>
                                 <td>
-                                    <a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a>
+                                    <a href="{{route('admin_place_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a>
                                 </td>
                             </tr>
 

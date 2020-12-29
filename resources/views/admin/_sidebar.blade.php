@@ -25,7 +25,7 @@
                 </a>
             </li>
             <li>
-                <a href="./map.html">
+                <a href="{{route('admin_places')}}">
                     <i class="now-ui-icons location_map-big"></i>
                     <p>Mekanlar</p>
                 </a>
