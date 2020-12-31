@@ -8,6 +8,7 @@ use App\Models\Place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class PlaceController extends Controller
 {
@@ -52,6 +53,7 @@ class PlaceController extends Controller
         $data->detail = $request->input('detail');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
+        $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
 
         return redirect()->route('admin_places');
@@ -101,6 +103,9 @@ class PlaceController extends Controller
         $data->detail = $request->input('detail');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
+
+        $data->image = $request->file('image')->store('images');
+
         $data->save();
         return redirect()->route('admin_places');
     }

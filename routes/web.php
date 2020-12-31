@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 
+
 //Admin Kısmı
 Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
@@ -53,6 +54,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     });
 
 });
+
 
 
 

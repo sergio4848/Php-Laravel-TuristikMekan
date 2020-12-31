@@ -2,6 +2,8 @@
 
 @section('title','Mekan Ekle')
 
+
+
 @section('content')
 <div class="content">
     <div class="row">
@@ -13,8 +15,8 @@
                 </div>
                 <div class="card-body">
 
-                   <div style="width:200px; height: 800px;">
-                       <form action="{{route('admin_place_store')}}" method="post">
+                   <div style="width:200px; height: 1000px;">
+                       <form action="{{route('admin_place_store')}}" method="post" enctype="multipart/form-data">
                            @csrf
                        <table>
 
@@ -29,8 +31,11 @@
                            <tr><h4>Title:</h4> <input style="width: 600px" id="title" type="text" name="title" placeholder="Title"/></tr>
                            <tr><h4>Keywords: </h4><input style="width: 600px" id="keywords" type="text" name="keywords" placeholder="Keywords"/></tr>
                            <tr><h4>Description: </h4><input style="width: 600px" id="description" type="text" name="description" placeholder="Description"/></tr>
-                           <tr><h4>Detail: </h4><input style="width: 600px" id="detail" type="text" name="detail" placeholder="Detail"/></tr>
+                           <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>
+
+                                   </tr>
                            <tr><h4>Slug: </h4><input style="width: 600px" id="slug" type="text" name="slug" placeholder="Slug"/></tr>
+                           <tr><label for="image"><h4>Image:</h4></label><input type="file" name="image" id="image" class="form-control">
                            <tr><label for="status"><h4>Status:</h4></label>
 
                                <select name="status" id="status" style="width: 600px">

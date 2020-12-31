@@ -43,7 +43,10 @@
                                     {{$rs->title}}
                                 </td>
                                 <td>
-                                    {{$rs->image}}
+                                    @if($rs->image)
+                                        <img src="{{Storage::url($rs->image)}}" height="60" width="120" alt=""/>
+                                    @endif
+
                                 </td>
                                 <td>
                                     {{$rs->status}}
