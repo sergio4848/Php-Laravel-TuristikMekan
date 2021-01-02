@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{route('admin_place_create')}}" style="position: absolute; right: 25px; background-color: #00bbff;" class="now-ui-icons ui-1_simple-add">Mekan Ekle</a>
+                    <a href="{{route('admin_place_create')}}" style="position: absolute; right: 25px;"><img src="{{asset('assets/admin/images')}}/add.jpg" width="100"></a>
 
                     <h5 class="title">Mekanlar</h5>
 
@@ -23,6 +23,7 @@
                             <th>Category</th>
                             <th>Title</th>
                             <th>Image</th>
+                            <th>Image Gallery</th>
                             <th>Status</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -48,14 +49,15 @@
                                     @endif
 
                                 </td>
+                                <td><a href="{{route('admin_image_add',['place_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><img src="{{asset('assets/admin/images')}}/gallery.png" height="60"></a></td>
                                 <td>
                                     {{$rs->status}}
                                 </td>
                                 <td>
-                                    <a href="{{route('admin_place_edit',['id'=>$rs->id])}}">Edit</a>
+                                    <a href="{{route('admin_place_edit',['id'=>$rs->id])}}"><img src="{{asset('assets/admin/images')}}/edit.png" height="30"></a>
                                 </td>
                                 <td>
-                                    <a href="{{route('admin_place_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')">Delete</a>
+                                    <a href="{{route('admin_place_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" height="30"></a>
                                 </td>
                             </tr>
 
