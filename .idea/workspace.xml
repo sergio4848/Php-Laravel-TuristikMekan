@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89cd4aa-adab-406d-bd43-87498f4aa0d8" name="Default Changelist" comment="Controller List">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_103433_create_images_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_103819_image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/add.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/images/gallery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/image_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_120758_create_settings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_03_122354_setting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/admin/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/place.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/place.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +237,9 @@
       <workItem from="1609402246888" duration="657000" />
       <workItem from="1609410272911" duration="15717000" />
       <workItem from="1609500494341" duration="1852000" />
-      <workItem from="1609583635835" duration="14716000" />
+      <workItem from="1609583635835" duration="14720000" />
+      <workItem from="1609666527176" duration="5703000" />
+      <workItem from="1609675401325" duration="10567000" />
     </task>
     <servers />
   </component>
@@ -273,14 +272,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606655850059" />
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609587352157">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609683384016">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609587352157" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1609437320715">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609683384016" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1609666582846">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609437320715" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609666582846" />
     <state width="904" height="174" key="GridCell.Tab.0.bottom" timestamp="1608826953420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

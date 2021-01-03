@@ -30,6 +30,12 @@
                     <p>Mekanlar</p>
                 </a>
             </li>
+            <li>
+                <a href="{{route('admin_setting')}}">
+                    <i class="now-ui-icons loader_gear"></i>
+                    <p>Ayarlar</p>
+                </a>
+            </li>
 
         </ul>
     </div>
