@@ -15,7 +15,7 @@
                 <div class="card-body">
 
                     <div class="container">
-                        
+
                    <div style="width:200px; height: 2500px;">
                        <form action="{{route('admin_setting_update')}}" method="post" enctype="multipart/form-data">
                            @csrf

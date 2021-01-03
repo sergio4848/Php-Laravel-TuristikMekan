@@ -30,7 +30,7 @@
                            <tr><h4>Description: </h4><input style="width: 600px" id="description" value="{{$data->description}}" type="text" name="description" placeholder="Description"/></tr>
                            <tr><h4>Detail: </h4><input style="width: 600px" id="detail" value="{{$data->detail}}" type="text" name="detail" placeholder="Detail"/></tr>
                            <tr><h4>Slug: </h4><input style="width: 600px" id="slug" value="{{$data->slug}}" type="text" name="slug" placeholder="Slug"/></tr>
-                           <tr><label for="image"><h4>Image:</h4></label><input type="file" name="image" id="image" value="{{$data->image}}" class="form-control">
+                           <tr><label for="image"><h4>Image:</h4></label><input type="file" name="image" id="image"  class="form-control">
                               <br>
                            @if($data->image)
                                <img src="{{Storage::url($data->image)}}" height="100" alt=""/>

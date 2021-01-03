@@ -103,8 +103,11 @@ class PlaceController extends Controller
         $data->detail = $request->input('detail');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
+        if($request->file('image')!=null)
+        {
+            $data->image = Storage::putFile('images',$request->file('image'));
+        }
 
-        $data->image = $request->file('image')->store('images');
 
         $data->save();
         return redirect()->route('admin_places');

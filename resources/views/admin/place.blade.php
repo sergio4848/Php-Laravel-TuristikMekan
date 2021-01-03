@@ -19,14 +19,14 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead class=" text-primary">
-                            <th>Id</th>
-                            <th>Category</th>
-                            <th>Title</th>
-                            <th>Image</th>
-                            <th>Image Gallery</th>
-                            <th>Status</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th><b>Id</b></th>
+                            <th><b>Category</b></th>
+                            <th><b>Title(s)</b></th>
+                            <th><b>Image</b></th>
+                            <th><b>Image Gallery</b></th>
+                            <th><b>Status</b></th>
+                            <th><b>Edit</b></th>
+                            <th><b>Delete</b></th>
 
                             </thead>
 
@@ -38,7 +38,7 @@
                                     {{$rs->id}}
                                 </td>
                                 <td>
-                                    {{$rs->category_id}}
+                                    {{$rs->category->title}}
                                 </td>
                                 <td>
                                     {{$rs->title}}
