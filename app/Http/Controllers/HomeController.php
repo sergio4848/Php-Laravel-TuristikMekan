@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
     public static function categoryList()
@@ -18,6 +19,15 @@ class HomeController extends Controller
     }
     public function aboutus(){
         return view('home.about');
+    }
+    public function contact(){
+        return view('home.contact');
+    }
+    public function faq(){
+        return view('home.faq');
+    }
+    public function references(){
+        return view('home.reference');
     }
     public function login(){
         return view('admin.login');

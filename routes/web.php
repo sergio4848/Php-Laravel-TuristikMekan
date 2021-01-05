@@ -26,6 +26,9 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 
 //Admin Kısmı

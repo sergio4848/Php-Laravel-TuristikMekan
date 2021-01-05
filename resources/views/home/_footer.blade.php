@@ -7,7 +7,7 @@
                 <div class="widget">
                     <h5>Interesting pages</h5>
                     <ul class="regular">
-                        <li><a href="#">About our company</a></li>
+                        <li><a href="{{route('aboutus')}}">About our company</a></li>
                         <li><a href="#">How we do all stuff</a></li>
                         <li><a href="#">Our recent works</a></li>
                         <li><a href="#">Press releases</a></li>
@@ -40,11 +40,9 @@
                 </div>
                 <div class="widget">
                     <ul class="social">
-                        <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
-                        <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
-                        <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
-                        <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square icon-32"></i></a></li>
-                        <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square icon-32"></i></a></li>
+                        <li><a href="https://twitter.com/sergennsahinnn" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
+                        <li><a href="https://www.facebook.com/sergen.sahin.77736" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
+                        <li><a href="https://www.instagram.com/sergenssahin/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +53,7 @@
             <div class="row">
                 <div class="span6">
                     <p>
-                        &copy; Lumia - All right reserved
+                        &copy; 2021 - All right reserved
                     </p>
                 </div>
                 <div class="span6">
