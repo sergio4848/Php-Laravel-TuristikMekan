@@ -25,7 +25,7 @@
 
                                         @foreach($parentCategories as $rs)
                                             <li class="dropdown">
-                                                <a href="#"><i class="icon-cog"></i> {{$rs->title}} <i class="icon-angle-down"></i></a>
+                                                <a href="#"> {{$rs->title}} <i class="icon-angle-down"></i></a>
                                                 <ul class="dropdown-menu">
 
                                                     @if(count($rs->children))
@@ -34,19 +34,22 @@
                                                 </ul>
                                             </li>
                                         @endforeach
+                            <li class="dropdown">
                             @auth
-                                <li class="dropdown">
-                                    <a href="#"><i class="icon-cog"></i>{{Auth::user()->name}}<i class="icon-angle-down"></i></a>
+                                <a href="#"><i class="icon-user"></i>{{Auth::user()->name}}<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{route('admin_logout')}}">Logout</a></li>
+                                        <li><a href="{{route('logout')}}">Logout</a></li>
                                     </ul>
-                                </li>
-                            @elseauth
-
-                                    <a href="{{route('admin_login')}}"><i class="icon-envelope-alt"></i>Login</a>
-
                             @endauth
 
+                            @guest
+                                <a href="/login"><i class="icon-user"></i>Login</a>
+                                <a href="/register"><i class="icon-lock"></i>Register</a>
+                            @endguest
+
+
+
+                            </li>
                         </ul>
                     </nav>
                 </div>

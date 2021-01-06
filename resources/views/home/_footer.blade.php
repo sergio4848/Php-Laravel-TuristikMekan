@@ -5,37 +5,29 @@
         <div class="row">
             <div class="span4">
                 <div class="widget">
-                    <h5>Interesting pages</h5>
+                    <h5>Daha Fazlası İçin</h5>
                     <ul class="regular">
-                        <li><a href="{{route('aboutus')}}">About our company</a></li>
-                        <li><a href="#">How we do all stuff</a></li>
-                        <li><a href="#">Our recent works</a></li>
-                        <li><a href="#">Press releases</a></li>
-                        <li><a href="#">Get in touch with us</a></li>
+                        <li><a href="{{route('aboutus')}}">Hakkımızda</a></li>
+                        <li><a href="{{route('contact')}}">İletişim</a></li>
+                        <li><a href="{{route('references')}}">Referanslarımız</a></li>
+                        <li><a href="{{route('faq')}}">FAQ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="span4">
-                <div class="widget">
-                    <h5>Flickr photostream</h5>
-                    <div class="flickr-badge">
-                        <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
 
-                    </div>
-                    <div class="clear"></div>
-                </div>
             </div>
             <div class="span4">
                 <div class="widget">
                     <h5>How to find us</h5>
                     <address>
-                        <i class="icon-home"></i> <strong>Lumia company, Inc.</strong><br>
-                        X104 Awesome ville, Suite AB12<br>
-                        Jakarta 12420 Indonesia
+                        <i class="icon-home"></i> <strong>Hawk Software company, Inc.</strong><br>
+                        Atatürk Mahallesi 232.Sokak No:26<br>
+                        Yatağan, MUĞLA
                     </address>
                     <p>
-                        <i class="icon-phone"></i> (123) 456-7890 - (123) 555-8890<br>
-                        <i class="icon-envelope-alt"></i> email@domainname.com
+                        <i class="icon-phone"></i> +90 538 5041453<br>
+                        <i class="icon-envelope-alt"></i> sergensahin96@gmail.com
                     </p>
                 </div>
                 <div class="widget">
@@ -76,7 +68,7 @@
 
 </div>
 <!-- end wrapper -->
-<a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+<a href="/" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
 
 <script src="{{asset('assets')}}/js/jquery.js"></script>
 <script src="{{asset('assets')}}/js/raphael-min.js"></script>
