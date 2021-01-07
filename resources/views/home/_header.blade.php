@@ -44,7 +44,12 @@
                             @endauth
 
                             @guest
-                                <a href="/login"><i class="icon-user"></i>Login</a><a href="/register"><i class="icon-lock"></i>Register</a>
+                               <a href="#"><i class="icon-user"></i>Giriş<i class="icon-angle-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <a href="/login"><i class="icon-user"></i>Login</a>
+                                        <a href="/register"><i class="icon-lock"></i>Register</a>
+                                    </ul>
+
                             @endguest
 
 
