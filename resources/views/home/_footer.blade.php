@@ -68,7 +68,7 @@
 
 </div>
 <!-- end wrapper -->
-<a href="/" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
+
 
 <script src="{{asset('assets')}}/js/jquery.js"></script>
 <script src="{{asset('assets')}}/js/raphael-min.js"></script>

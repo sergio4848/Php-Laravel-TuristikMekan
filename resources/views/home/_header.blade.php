@@ -38,13 +38,13 @@
                             @auth
                                 <a href="#"><i class="icon-user"></i>{{Auth::user()->name}}<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
+                                        <li><a href="{{route('myprofile')}}">Profilim</a></li>
                                         <li><a href="{{route('logout')}}">Logout</a></li>
                                     </ul>
                             @endauth
 
                             @guest
-                                <a href="/login"><i class="icon-user"></i>Login</a>
-                                <a href="/register"><i class="icon-lock"></i>Register</a>
+                                <a href="/login"><i class="icon-user"></i>Login</a><a href="/register"><i class="icon-lock"></i>Register</a>
                             @endguest
 
 

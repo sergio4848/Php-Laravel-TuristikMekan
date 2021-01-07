@@ -7,6 +7,8 @@
 @endsection
 
 @section('keywords','Oteller, Restaurantlar, Tarihi Mekanlar, Hamamlar')
+@include('home._header')
+@include('home._slider')
 
 @section('content')
     <section id="maincontent">

@@ -35,9 +35,9 @@
     @yield('headerjs')
 </head>
 <body>
-@include('home._header')
 
-@include('home._slider')
+
+
 
 @section('content')
     @show
