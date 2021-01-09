@@ -2,6 +2,14 @@
 
 @section('title','Mekan Düzenle')
 
+@section('javascript')
+    <head>
+        @FilemanagerScript
+    </head>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
+@endsection
+
 @section('content')
 <div class="content">
     <div class="row">
@@ -28,7 +36,14 @@
                            <tr><h4>Title:</h4> <input style="width: 600px" id="title" value="{{$data->title}}" type="text" name="title" placeholder="Title"/></tr>
                            <tr><h4>Keywords: </h4><input style="width: 600px" id="keywords" value="{{$data->keywords}}" type="text" name="keywords" placeholder="Keywords"/></tr>
                            <tr><h4>Description: </h4><input style="width: 600px" id="description" value="{{$data->description}}" type="text" name="description" placeholder="Description"/></tr>
-                           <tr><h4>Detail: </h4><input style="width: 600px" id="detail" value="{{$data->detail}}" type="text" name="detail" placeholder="Detail"/></tr>
+                           <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>{{$data->detail}}</tr>
+                           <script>
+                               window.onload = function () {
+                                   CKEDITOR.replace('detail', {
+                                       filebrowserBrowseUrl: filemanager.ckBrowseUrl,
+                                   });
+                               }
+                           </script>
                            <tr><h4>Slug: </h4><input style="width: 600px" id="slug" value="{{$data->slug}}" type="text" name="slug" placeholder="Slug"/></tr>
                            <tr><label for="image"><h4>Image:</h4></label><input type="file" name="image" id="image"  class="form-control">
                               <br>

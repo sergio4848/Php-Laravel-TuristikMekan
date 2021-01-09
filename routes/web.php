@@ -19,17 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::redirect('/anasayfa','/home')->name('anasayfa');
+Route::redirect('/anasayfa','/')->name('anasayfa');
 
-Route::get('/', function () {
-    return view('home.index');
-});
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
+Route::get('/place/{id}/{slug}', [HomeController::class, 'place'])->name('place');
 
 
 //Admin Kısmı
@@ -54,6 +54,15 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::post('update/{id}',[\App\Http\Controllers\Admin\PlaceController::class,'update'])->name('admin_place_update');
         Route::get('delete/{id}',[\App\Http\Controllers\Admin\PlaceController::class,'destroy'])->name('admin_place_delete');
         Route::get('show',[\App\Http\Controllers\Admin\PlaceController::class,'show'])->name('admin_place_show');
+
+    });
+
+    Route::prefix('messages')->group(function (){
+        Route::get('/',[\App\Http\Controllers\Admin\MessageController::class,'index'])->name('admin_message');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\MessageController::class,'edit'])->name('admin_message_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\MessageController::class,'update'])->name('admin_message_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\MessageController::class,'destroy'])->name('admin_message_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\MessageController::class,'show'])->name('admin_message_show');
 
     });
     #Place Image Gallery

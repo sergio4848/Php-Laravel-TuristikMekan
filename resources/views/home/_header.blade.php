@@ -16,7 +16,10 @@
                 @endphp
                 <div class="navigation">
                     <nav>
-                        <ul class="nav topnav" style="width: 1000px;">
+                        <ul class="nav topnav" style="width: 1500px;">
+                            <li><div style="width:570px;height:20px;"></div></li>
+
+
                             <li class="active">
                                 <a href="{{route('home')}}"><i class="icon-home"></i> Ana Sayfa </a>
                             </li>
@@ -36,6 +39,7 @@
                                         @endforeach
                             <li class="dropdown">
                             @auth
+
                                 <a href="#"><i class="icon-user"></i>{{Auth::user()->name}}<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{route('myprofile')}}">Profilim</a></li>
@@ -46,8 +50,10 @@
                             @guest
                                <a href="#"><i class="icon-user"></i>Giriş<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
-                                        <a href="/login"><i class="icon-user"></i>Login</a>
-                                        <a href="/register"><i class="icon-lock"></i>Register</a>
+                                        <li><a href="/login"><i class="icon-user"></i>Login</a></li>
+                                        <li><a href="/register"><i class="icon-lock"></i>Register</a></li>
+
+
                                     </ul>
 
                             @endguest

@@ -6,27 +6,25 @@
                 <!-- Place somewhere in the <body> of your page -->
                 <div id="mainslider" class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="{{asset('assets')}}/img/slides/flexslider/img1.jpg">
-                            <img src="{{asset('assets')}}/img/slides/flexslider/img1.jpg" alt="" />
+                        @php
+                        $i=0;
+                        @endphp
+                        @foreach($slider as $rs)
+                            @php
+                            $i+=1;
+                            @endphp
+                        <li data-thumb="{{ Storage::url($rs->image) }}" class="@if($i==1) active @endif">
+                            <img src="{{ Storage::url($rs->image) }}" style="height: 400px; width: 940px;" alt="" />
                             <div class="flex-caption primary">
-                                <h2>Bootstrap</h2>
-                                <p>Lorem ipsum dolor sit amet vix ceteros noluisse intellegat</p>
+                                <h2>{{$rs->title}}</h2>
+                                <div class="cta">
+                                    <a class="btn btn-large btn-theme" href="{{route('place',['id' => $rs->id,'slug' => $rs->slug])}}">
+                                        <i class="icon-plane icon-white"></i> Mekanı İncele! </a>
+                                </div>
                             </div>
                         </li>
-                        <li data-thumb="{{asset('assets')}}/img/slides/flexslider/img2.jpg">
-                            <img src="{{asset('assets')}}/img/slides/flexslider/img2.jpg" alt="" />
-                            <div class="flex-caption warning">
-                                <h2>Responsive layout</h2>
-                                <p>Lorem ipsum dolor sit amet vix ceteros noluisse intellegat</p>
-                            </div>
-                        </li>
-                        <li data-thumb="{{asset('assets')}}/img/slides/flexslider/img3.jpg">
-                            <img src="{{asset('assets')}}/img/slides/flexslider/img3.jpg" alt="" />
-                            <div class="flex-caption success">
-                                <h2>Rich of features</h2>
-                                <p>Lorem ipsum dolor sit amet vix ceteros noluisse intellegat</p>
-                            </div>
-                        </li>
+                        @endforeach
+
                     </ul>
                 </div>
             </div>

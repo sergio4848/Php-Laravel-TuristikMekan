@@ -31,6 +31,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{route('admin_message')}}">
+                    <i class="now-ui-icons location_map-big"></i>
+                    <p>İletişim Mesajları</p>
+                </a>
+            </li>
+            <li>
                 <a href="{{route('admin_setting')}}">
                     <i class="now-ui-icons loader_gear"></i>
                     <p>Ayarlar</p>

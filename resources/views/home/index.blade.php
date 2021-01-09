@@ -1,12 +1,10 @@
 @extends('layouts.home')
 
-@section('title', 'Turistik Mekanlar')
+@section('title', 'Ana Sayfa '.$setting->title)
 
-@section('description')
-    Turistik mekanları gör, incele ve keşfet!
-@endsection
+@section('description'){{$setting->description}}@endsection
 
-@section('keywords','Oteller, Restaurantlar, Tarihi Mekanlar, Hamamlar')
+@section('keywords',$setting->description)
 @include('home._header')
 @include('home._slider')
 

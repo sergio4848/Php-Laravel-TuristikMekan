@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Message;
+use App\Models\Place;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use MongoDB\Driver\Session;
 
 
 class HomeController extends Controller
@@ -13,21 +17,57 @@ class HomeController extends Controller
     {
         return Category::where('parent_id','=',0)->with('children')->get();
     }
+    public static function getsetting()
+    {
+        return Setting::first();
+    }
 
     public function index(){
-        return view('home.index');
+        $setting=Setting::first();
+        $slider=Place::select('id','title','image','slug')->limit(4)->get();
+        $data=[
+            'setting'=>$setting,
+            'slider'=>$slider,
+            'page'=>'home'
+
+        ];
+        return view('home.index',$data);
     }
     public function aboutus(){
-        return view('home.about');
+        $setting=Setting::first();
+        return view('home.about',['setting'=>$setting,]);
     }
+    public function place($id,$slug){
+        $data=Place::find($id);
+
+    }
+
     public function contact(){
-        return view('home.contact');
+        $setting=Setting::first();
+        return view('home.contact',['setting'=>$setting,'page'=>'home']);
     }
     public function faq(){
-        return view('home.faq');
+        $setting=Setting::first();
+        return view('home.faq',['setting'=>$setting,'page'=>'home']);
     }
     public function references(){
-        return view('home.reference');
+        $setting=Setting::first();
+        return view('home.references',['setting'=>$setting,'page'=>'home']);
+    }
+    public function sendmessage(Request $request)
+    {
+        $data = new Message();
+
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+
+
+        $data->save();
+
+        return redirect()->route('contact')->with('success','Mesajınız kaydedilmiştir');
     }
     public function login(){
         return view('admin.login');

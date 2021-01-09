@@ -2,6 +2,13 @@
 
 @section('title','Mekan Ekle')
 
+@section('javascript')
+    <head>
+    @FilemanagerScript
+    </head>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
+@endsection
 
 
 @section('content')
@@ -32,6 +39,15 @@
                            <tr><h4>Keywords: </h4><input style="width: 600px" id="keywords" type="text" name="keywords" placeholder="Keywords"/></tr>
                            <tr><h4>Description: </h4><input style="width: 600px" id="description" type="text" name="description" placeholder="Description"/></tr>
                            <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>
+                               <script>
+                                   window.onload = function () {
+                                       CKEDITOR.replace('detail', {
+                                           filebrowserBrowseUrl: filemanager.ckBrowseUrl,
+                                       });
+                                   }
+                               </script>
+
+
 
                                    </tr>
                            <tr><h4>Slug: </h4><input style="width: 600px" id="slug" type="text" name="slug" placeholder="Slug"/></tr>
