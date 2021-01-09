@@ -24,6 +24,7 @@
                             <th><b>Title(s)</b></th>
                             <th><b>Image</b></th>
                             <th><b>Image Gallery</b></th>
+                            <th><b>City</b></th>
                             <th><b>Status</b></th>
                             <th><b>Edit</b></th>
                             <th><b>Delete</b></th>
@@ -50,6 +51,9 @@
 
                                 </td>
                                 <td><a href="{{route('admin_image_add',['place_id'=>$rs->id])}}" onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><img src="{{asset('assets/admin/images')}}/gallery.png" height="60"></a></td>
+                                <td>
+                                    {{$rs->city}}
+                                </td>
                                 <td>
                                     {{$rs->status}}
                                 </td>

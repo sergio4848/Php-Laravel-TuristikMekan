@@ -38,6 +38,8 @@
                            <tr><h4>Title:</h4> <input style="width: 600px" id="title" type="text" name="title" placeholder="Title"/></tr>
                            <tr><h4>Keywords: </h4><input style="width: 600px" id="keywords" type="text" name="keywords" placeholder="Keywords"/></tr>
                            <tr><h4>Description: </h4><input style="width: 600px" id="description" type="text" name="description" placeholder="Description"/></tr>
+                           <tr><h4>Address: </h4><input style="width: 600px" id="address" type="text" name="address" placeholder="address"/></tr>
+                           <tr><h4>City: </h4><input style="width: 600px" id="city" type="text" name="city" placeholder="city"/></tr>
                            <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>
                                <script>
                                    window.onload = function () {

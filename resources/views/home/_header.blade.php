@@ -28,7 +28,7 @@
 
                                         @foreach($parentCategories as $rs)
                                             <li class="dropdown">
-                                                <a href="#"> {{$rs->title}} <i class="icon-angle-down"></i></a>
+                                                <a href="{{route('categoryplaces',['id'=>$rs->id,'slug'=>$rs->title])}}"> {{$rs->title}} <i class="icon-angle-down"></i></a>
                                                 <ul class="dropdown-menu">
 
                                                     @if(count($rs->children))

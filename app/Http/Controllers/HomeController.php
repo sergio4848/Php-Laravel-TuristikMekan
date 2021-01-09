@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\Place;
 use App\Models\Setting;
@@ -25,8 +26,14 @@ class HomeController extends Controller
     public function index(){
         $setting=Setting::first();
         $slider=Place::select('id','title','image','slug')->limit(4)->get();
+        $daily=Place::select('id','title','image','slug')->limit(4)->inRandomOrder()->get();
+        $last=Place::select('id','title','image','slug')->limit(4)->orderByDesc('id')->get();
+        $picked=Place::select('id','title','image','slug')->limit(4)->inRandomOrder()->get();
         $data=[
             'setting'=>$setting,
+            'daily'=>$daily,
+            'last'=>$last,
+            'picked'=>$picked,
             'slider'=>$slider,
             'page'=>'home'
 
@@ -35,10 +42,19 @@ class HomeController extends Controller
     }
     public function aboutus(){
         $setting=Setting::first();
-        return view('home.about',['setting'=>$setting,]);
+        return view('home.about',['setting'=>$setting,'page'=>'home']);
     }
     public function place($id,$slug){
         $data=Place::find($id);
+        $datalist=Image::where('place_id',$id)->get();
+        return view('home.place_detail',['data'=>$data,'datalist'=>$datalist]);
+
+    }
+    public function categoryplaces($id,$slug){
+        $datalist=Place::where('category_id',$id)->get();
+        $data=Category::find($id);
+
+        return view('home.category_places',['data'=>$data,'datalist'=>$datalist]);
 
     }
 

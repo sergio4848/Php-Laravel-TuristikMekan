@@ -20,53 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89cd4aa-adab-406d-bd43-87498f4aa0d8" name="Default Changelist" comment="Controller List">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/filemanager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_02_100001_create_filemanager_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_08_160751_create_messages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_08_161423_message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/bundle/app.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/bundle/app.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/bundle/filemanager.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/HindSiliguri-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/SolaimanLipi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/doc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/missing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/pdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/txt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/xls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/filemanager/img/previews/zip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/faq.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/message.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel1j.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel1j.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_123210_add_address_to_places.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_09_123345_add_city_to_places.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/category_places.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/place.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/place_detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c68e55c2-aab7-49a6-8f6f-c058026315e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c68e55c2-aab7-49a6-8f6f-c058026315e8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlaceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlaceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/place.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/place.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/place_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/place_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/place_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/place_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/setting_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_blank.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/categorytree.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +264,8 @@
       <workItem from="1610092091411" duration="3438000" />
       <workItem from="1610097143774" duration="1090000" />
       <workItem from="1610111132544" duration="9203000" />
-      <workItem from="1610140072798" duration="11705000" />
+      <workItem from="1610140072798" duration="11901000" />
+      <workItem from="1610182999835" duration="14248000" />
     </task>
     <servers />
   </component>
@@ -356,10 +326,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1608826862708" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1610127076509">
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1610194755338">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1610127076509" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1610194755338" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1606641671536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -384,6 +354,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="581" y="104" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1610144786835" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1610192598145">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610192598145" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609410354447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

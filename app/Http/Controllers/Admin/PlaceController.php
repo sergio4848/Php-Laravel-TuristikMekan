@@ -47,6 +47,8 @@ class PlaceController extends Controller
         $data->title = $request->input('title');
         $data->keywords = $request->input('keywords');
         $data->description = $request->input('description');
+        $data->address = $request->input('address');
+        $data->city = $request->input('city');
         $data->image = $request->input('image');
         $data->category_id = $request->input('category_id');
         $data->user_id = Auth::id();
@@ -97,6 +99,8 @@ class PlaceController extends Controller
         $data->title = $request->input('title');
         $data->keywords = $request->input('keywords');
         $data->description = $request->input('description');
+        $data->address = $request->input('address');
+        $data->city = $request->input('city');
         $data->image = $request->input('image');
         $data->category_id = $request->input('category_id');
         $data->user_id = Auth::id();

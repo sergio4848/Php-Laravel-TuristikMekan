@@ -24,7 +24,7 @@
 
                     <div class="container">
 
-                   <div style="width:200px; height: 4000px;">
+                   <div style="width:200px; height: 6000px;">
                        <form action="{{route('admin_setting_update')}}" method="post" enctype="multipart/form-data">
                            @csrf
                        <table>
