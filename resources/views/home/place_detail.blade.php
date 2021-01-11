@@ -43,9 +43,32 @@
 
                                 </ul>
                             </div>
-                            <h4>HARİTADA GÖR</h4>
-                            <!-- end flexslider -->
+                            <h1>HARİTADA GÖR</h1>
                             <p>{!! $data->detail !!}</p>
+                            <h4>Comments</h4>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="{{asset('assets')}}/img/small-avatar.png" alt="" />
+                                    </a>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><a href="#">John doe</a></h5>
+                                        <span>3 March, 2013</span>
+                                        <p>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                        </p>
+                                        <a href="#" class="reply">Reply</a>
+                                        <div class="clearfix">
+                                        </div>
+                                </li>
+                            </ul>
+                            <div class="comment-post">
+                                <h4>Leave a comment</h4>
+                                @livewire('review',['id'=>$data->id])
+                            </div>
+
+
+
                         </div>
                         <div class="span4">
                             <aside>
@@ -60,6 +83,7 @@
                                 </div>
                             </aside>
                         </div>
+
                     </div>
                 </article>
                 <!-- end article full post -->

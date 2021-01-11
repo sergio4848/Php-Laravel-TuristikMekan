@@ -6,6 +6,7 @@
 
 @section('keywords',$setting->description)
 @include('home._header')
+@include('home.search_content')
 @include('home._slider')
 
 @section('content')
@@ -62,7 +63,7 @@
 
             </div>
 
-            
+
 
         </div>
     </section>

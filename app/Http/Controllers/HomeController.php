@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\Place;
+use App\Models\Review;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +23,15 @@ class HomeController extends Controller
     {
         return Setting::first();
     }
+    public static function countreview($id)
+    {
+        return Review::where('place_id',$id)->count();
+    }
+    public static function avrgreview($id)
+    {
+        return Review::where('place_id',$id)->average('rate');
+    }
+
 
     public function index(){
         $setting=Setting::first();
@@ -44,10 +54,35 @@ class HomeController extends Controller
         $setting=Setting::first();
         return view('home.about',['setting'=>$setting,'page'=>'home']);
     }
+    public function getplace(Request $request)
+    {
+        $search=$request->input('search');
+        $count=Place::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data=Place::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('place',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else
+        {
+            return redirect()->route('placelist',['search'=>$search]);
+        }
+
+
+    }
+    public function placelist($search){
+        $datalist=Place::where('title','like','%'.$search.'%')->get();
+
+        return view('home.search_places',['search'=>$search,'datalist'=>$datalist]);
+
+    }
+
     public function place($id,$slug){
+        $setting=Setting::first();
         $data=Place::find($id);
         $datalist=Image::where('place_id',$id)->get();
-        return view('home.place_detail',['data'=>$data,'datalist'=>$datalist]);
+        $reviews=Review::where('place_id',$id)->get();
+        return view('home.place_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
 
     }
     public function categoryplaces($id,$slug){

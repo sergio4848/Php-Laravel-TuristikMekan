@@ -31,6 +31,8 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/place/{id}/{slug}', [HomeController::class, 'place'])->name('place');
 Route::get('/categoryplaces/{id}/{slug}', [HomeController::class, 'categoryplaces'])->name('categoryplaces');
+Route::post('/getplace', [HomeController::class, 'getplace'])->name('getplace');
+Route::get('/placelist/{search}', [HomeController::class, 'placelist'])->name('placelist');
 
 
 //Admin Kısmı
