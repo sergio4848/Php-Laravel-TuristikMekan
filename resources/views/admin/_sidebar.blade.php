@@ -4,10 +4,12 @@
   -->
     <div class="logo">
         <a href="{{route('admin_home')}}" class="simple-text logo-mini">
-            AYT
+            @if(Auth::user()->profile_photo_path)
+                <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="40" style="border-radius: 10px">
+            @endif
         </a>
         <a href="{{route('admin_home')}}" class="simple-text logo-normal">
-            ADMIN YÖNETİCİ PANELİ
+            {{Auth::user()->name}}
         </a>
     </div>
     <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -52,6 +54,12 @@
                 <a href="{{route('admin_like')}}">
                     <i class="now-ui-icons ui-2_like"></i>
                     <p>Beğeniler</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin_users')}}">
+                    <i class="now-ui-icons users_circle-08"></i>
+                    <p>Kullanıcılar</p>
                 </a>
             </li>
             <li>

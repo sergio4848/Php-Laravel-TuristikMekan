@@ -41,6 +41,13 @@
                                             <li><a href="{{route('user_like')}}">Favorilerim</a></li>
                                             <li><a href="{{route('user_review')}}">Mesajlarım</a></li>
                                             <li><a href="{{route('logout')}}">Logout</a></li>
+                                            @php
+                                                $userRoles=Auth::User()->roles->pluck('name');
+                                            @endphp
+                                            @if($userRoles->contains('admin'))
+                                                <li><a href="{{route('admin_home')}}" target="_blank">ADMIN PANEL</a></li>
+                                            @endif
+
                                         </ul>
                                     </div>
                                 </div>
