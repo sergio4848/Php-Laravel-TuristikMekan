@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
+use App\Models\Like;
 use App\Models\Message;
 use App\Models\Place;
 use App\Models\Review;
@@ -23,19 +25,26 @@ class HomeController extends Controller
     {
         return Setting::first();
     }
+
     public static function countreview($id)
     {
-        return Review::where('place_id',$id)->count();
+        return Review::where('place_id', $id)->count();
+    }
+    public static function countlike($id)
+    {
+        return Like::where('place_id', $id)->count();
     }
     public static function avrgreview($id)
     {
-        return Review::where('place_id',$id)->average('rate');
+        return Review::where('place_id', $id)->average('rate');
     }
+
+
 
 
     public function index(){
         $setting=Setting::first();
-        $slider=Place::select('id','title','image','slug')->limit(4)->get();
+        $slider=Place::select('id','title','image','slug')->get();
         $daily=Place::select('id','title','image','slug')->limit(4)->inRandomOrder()->get();
         $last=Place::select('id','title','image','slug')->limit(4)->orderByDesc('id')->get();
         $picked=Place::select('id','title','image','slug')->limit(4)->inRandomOrder()->get();
@@ -99,7 +108,8 @@ class HomeController extends Controller
     }
     public function faq(){
         $setting=Setting::first();
-        return view('home.faq',['setting'=>$setting,'page'=>'home']);
+        $datalist=Faq::all()->sortBy('position');
+        return view('home.faq',['datalist'=>$datalist,'setting'=>$setting]);
     }
     public function references(){
         $setting=Setting::first();
@@ -119,6 +129,41 @@ class HomeController extends Controller
         $data->save();
 
         return redirect()->route('contact')->with('success','Mesajınız kaydedilmiştir');
+    }
+
+    public function like(Request $request, $id,Like $like)
+    {
+        $data = new Like;
+
+        $data->user_id = Auth::id();
+        $place = Place::find($id);
+        $data->place_id=$id;
+
+        $like->update(['like' =>'1']);
+
+
+        $data->save();
+
+        return redirect()->back()->with('success','BEĞENDİN');
+    }
+
+    public function sendreview(Request $request,$id)
+    {
+        $data = new Review;
+
+        $data->user_id = Auth::id();
+        $place = Place::find($id);
+        $data->place_id=$id;
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->IP = $_SERVER['REMOTE_ADDR'];
+        $data->rate = $request->input('rate');
+
+
+
+        $data->save();
+
+        return redirect()->route('place',['id'=>$place->id,'slug'=>$place->slug])->with('success','Mesajınız kaydedilmiştir');
     }
     public function login(){
         return view('admin.login');

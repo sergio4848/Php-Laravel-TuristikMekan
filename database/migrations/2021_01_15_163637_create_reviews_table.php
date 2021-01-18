@@ -20,7 +20,7 @@ class CreateReviewsTable extends Migration
             $table->string('subject',100)->nullable();
             $table->string('review')->nullable();
             $table->string('IP',20)->nullable();
-            $table->integer('rate')->default();
+            $table->integer('rate')->default('0');
             $table->string('status',5)->default('New');
             $table->timestamps();
         });

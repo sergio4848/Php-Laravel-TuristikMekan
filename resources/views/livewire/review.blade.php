@@ -1,41 +1,90 @@
 <div>
+
     @if(session()->has('message'))
         <div class="alert alert-success">
             {{session('message')}}
         </div>
     @endif
 
-    <form wire:submit.prevent="store" class="review-form">
-        @csrf
-        <div class="row">
-            <div class="span4">
-                <input wire:model="subject" type="text" class="input" placeholder="Subject" />
-                @error('subject') <span class="text-danger">{{$message}}</span>
-            </div>
-            <div class="span4">
+        <form wire:submit.prevent="store">
+            @csrf
+            <div class="row">
+                <div class="span4">
+                    <label>Subject<span>*</span></label>
+                    <input type="text" wire:model="subject" class="input-block-level" placeholder="Subject" />
+                    @error('subject')<span class="text-danger">{{$message}}</span>@enderror
+                </div>
+                <div class="span8">
+                    <label>Comment <span>*</span></label>
+                    <textarea rows="9" wire:model="review" class="input-block-level" placeholder="Your review"></textarea>
 
-                <input wire:model="review" type="text" class="input" placeholder="Your review" />
-                @error('review') <span class="text-danger">{{$message}}</span>
-            </div>
-            <div class="input-rating">
-                @error('rate') <span class="text-danger">{{$message}}</span>
-                <strong class="text-uppercase">Your Rating: </strong>
-                <div class="stars">
-                    <input type="radio" id="star5" wire:model="rate" value="5"/><label for="star5"></label>
-                    <input type="radio" id="star4" wire:model="rate" value="4"/><label for="star4"></label>
-                    <input type="radio" id="star3" wire:model="rate" value="3"/><label for="star3"></label>
-                    <input type="radio" id="star2" wire:model="rate" value="2"/><label for="star2"></label>
-                    <input type="radio" id="star1" wire:model="rate" value="1"/><label for="star1"></label>
+                    @error('review')<span class="text-danger">{{$message}}</span>@enderror
                 </div>
             </div>
-            <div class="span8">
-                @auth
-                    <button class="btn btn-theme" type="submit" value="save">Submit comment</button>
-                @else
-                    <a href="/login" class="btn-primary">For submit review Login</a>
-                @endauth
-
+            @error('rate') <span class="text-danger">{{$message}}</span>@enderror
+            <div class="rate">
+                <input type="radio" wire:model="rate" id="star5"  value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" wire:model="rate" id="star4"  value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" wire:model="rate" id="star3"  value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" wire:model="rate" id="star2"  value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" wire:model="rate" id="star1"  value="1" />
+                <label for="star1" title="text">1 star</label>
             </div>
-        </div>
-    </form>
+
+            <br>
+            <br>
+            @auth
+            <button class="btn btn-theme" type="submit">Submit review</button>
+            @else
+            <a href="/login" class="btn-primary">For submit please Login</a>
+            @endauth
+        </form>
+    <style>*{
+            margin: 0;
+            padding: 0;
+        }
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-9999px;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:30px;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #ffc700;
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+            color: #c59b08;
+        }
+    </style>
+
+
 </div>
+
+

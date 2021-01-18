@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'About Us '.$setting->title)
+@section('title', 'FAQ '.$setting->title)
 
 @section('description'){{$setting->description}}@endsection
 
@@ -31,7 +31,12 @@
                     <div class="row">
                         <div class="span16">
 
-                            {{$setting->faq}}
+
+                            @foreach($datalist as $rs)
+                                <h2>{{$rs->question}}</h2>
+                                {!! $rs->answer !!}
+                                <hr>
+                            @endforeach
 
                         </div>
 

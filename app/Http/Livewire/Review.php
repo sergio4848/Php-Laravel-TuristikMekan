@@ -10,17 +10,17 @@ class Review extends Component
 {
     public $record,$subject,$review,$place_id,$rate;
 
-    public function mount($id)
-    {
+    public function mount($id){
         $this->record=Place::findOrFail($id);
         $this->place_id=$this->record->id;
     }
+
     public function render()
     {
         return view('livewire.review');
     }
 
-    private function resetInput()
+    public function resetInput()
     {
         $this->subject=null;
         $this->review=null;
@@ -29,12 +29,11 @@ class Review extends Component
         $this->IP=null;
     }
 
-    public function store()
-    {
+    public function store(){
         $this->validate([
-           'subject'=>'required|min:5',
-           'review'=>'required|min:10',
-           'rate'=>'required',
+            'subject'=>'required|min:5',
+            'review'=>'required|min:10',
+            'rate'=>'required'
         ]);
 
         \App\Models\Review::create([
@@ -44,10 +43,10 @@ class Review extends Component
             'rate'=>$this->rate,
             'subject'=>$this->subject,
             'review'=>$this->review,
-
         ]);
 
-        session()->flash('message','Review Sent Successfully.');
+        session()->flash('message','Review Sent Succesfully');
         $this->resetInput();
     }
 }
+

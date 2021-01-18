@@ -32,8 +32,26 @@
             </li>
             <li>
                 <a href="{{route('admin_message')}}">
-                    <i class="now-ui-icons location_map-big"></i>
+                    <i class="now-ui-icons ui-1_send"></i>
                     <p>İletişim Mesajları</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin_review')}}">
+                    <i class="now-ui-icons ui-2_chat-round"></i>
+                    <p>Reviews</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin_faq')}}">
+                    <i class="now-ui-icons ui-1_email-85"></i>
+                    <p>FAQ</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin_like')}}">
+                    <i class="now-ui-icons ui-2_like"></i>
+                    <p>Beğeniler</p>
                 </a>
             </li>
             <li>

@@ -42,7 +42,10 @@
 
                                 <a href="#"><i class="icon-user"></i>{{Auth::user()->name}}<i class="icon-angle-down"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{route('myprofile')}}">Profilim</a></li>
+                                        <li><a href="{{route('userprofile')}}">Profilim{{Auth::user()->roles->pluck('name')}}</a></li>
+                                        <li><a href="{{route('user_places')}}">Mekanlarım</a></li>
+                                        <li><a href="{{route('user_like')}}">Favorilerim</a></li>
+                                        <li><a href="{{route('user_review')}}">Mesajlarım</a></li>
                                         <li><a href="{{route('logout')}}">Logout</a></li>
                                     </ul>
                             @endauth

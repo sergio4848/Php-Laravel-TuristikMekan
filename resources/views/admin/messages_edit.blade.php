@@ -24,7 +24,14 @@
                                             <tr><th><b>Subject</b></th><td>{{$data->subject}}</td></tr>
                                             <tr><th><b>Message</b></th><td>{{$data->message}}</td></tr>
                                             <tr><th><b>Admin Note</b></th><td><textarea id="note" name="note">{{$data->note}}</textarea></td></tr>
-                                            <tr><th><b>Status</b></th><td>{{$data->status}}</td></tr>
+                                            <tr><th><b>Status</b></th>
+                                                <td>
+                                                    <select name="status">
+                                                        <option selected>{{$data->status}}</option>
+                                                        <option>Accepted</option>
+                                                        <option>Cancelled</option>
+                                                    </select>
+                                                </td></tr>
                                             <tr><th><button type="submit" class="btn btn-dark">Update Message</button></th></tr>
                                             </thead>
 
