@@ -46,9 +46,9 @@
                            <tr><h4>Twitter: </h4><input style="width: 600px" id="twitter" value="{{$data->twitter}}" type="text" name="twitter" placeholder="twitter"/></tr>
                            <tr><h4>Instagram: </h4><input style="width: 600px" id="instagram" value="{{$data->instagram}}" type="text" name="instagram" placeholder="instagram"/></tr>
                            <tr><h4>Youtube: </h4><input style="width: 600px" id="youtube" value="{{$data->youtube}}" type="text" name="youtube" placeholder="youtube"/></tr>
-                           <tr><h4>About Us: </h4><textarea id="aboutus"  name="aboutus" ></textarea>{{$data->aboutus}}</tr>
-                           <tr><h4>Contact: </h4><textarea  id="contact"  name="contact" ></textarea>{{$data->contact}}</tr>
-                           <tr><h4>References: </h4><textarea id="references"  name="references" ></textarea>{{$data->references}}</tr>
+                           <tr><h4>About Us: </h4><textarea id="aboutus"  name="aboutus" >{{$data->aboutus}}</textarea></tr>
+                           <tr><h4>Contact: </h4><textarea  id="contact"  name="contact" >{{$data->contact}}</textarea></tr>
+                           <tr><h4>References: </h4><textarea id="references"  name="references" >{{$data->references}}</textarea></tr>
                            <script>
                                window.onload = function () {
                                    CKEDITOR.replace('references', {

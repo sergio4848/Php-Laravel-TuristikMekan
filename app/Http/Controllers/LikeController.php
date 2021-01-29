@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Like;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LikeController extends Controller
 {
@@ -14,7 +15,7 @@ class LikeController extends Controller
      */
     public function index()
     {
-        $datalist=Like::all();
+        $datalist=Like::where('user_id',Auth::id())->get();
         return view('home.user_like',['datalist'=>$datalist]);
     }
 

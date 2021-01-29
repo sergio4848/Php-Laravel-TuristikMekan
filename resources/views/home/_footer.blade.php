@@ -30,11 +30,15 @@
                         <i class="icon-envelope-alt"></i> sergensahin96@gmail.com
                     </p>
                 </div>
+                @php
+                    $setting=\App\Http\Controllers\HomeController::getsetting();
+                @endphp
+
                 <div class="widget">
                     <ul class="social">
-                        <li><a href="https://twitter.com/sergennsahinnn" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
-                        <li><a href="https://www.facebook.com/sergen.sahin.77736" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
-                        <li><a href="https://www.instagram.com/sergenssahin/" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
+                        <li><a href="{{$setting->twitter}}" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square icon-32"></i></a></li>
+                        <li><a href="{{$setting->facebook}}" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square icon-32"></i></a></li>
+                        <li><a href="{{$setting->instagram}}" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square icon-32"></i></a></li>
                     </ul>
                 </div>
             </div>

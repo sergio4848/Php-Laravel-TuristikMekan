@@ -1,6 +1,9 @@
 @extends('layouts.home')
+@php
+$setting=\App\Http\Controllers\HomeController::getsetting();
+@endphp
 
-@section('title', 'User Profile')
+@section('title', 'User Profile '.$setting->title)
 @include('home._header')
 @section('content')
     <section id="subintro">

@@ -21,7 +21,7 @@
                 </div>
                 <div class="card-body">
 
-                   <div style="width:200px; height: 1000px;">
+                   <div style="width:200px; height: 3000px;">
                        <form action="{{route('admin_place_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                            @csrf
                        <table>

@@ -72,7 +72,7 @@
                                             {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}
                                         </td>
                                         <td>
-                                            {{$rs->title}}
+                                            <a href="{{route('place',['id'=>$rs->id,'slug'=>$rs->slug])}}" target="_blank">{{$rs->title}}</a>
                                         </td>
                                         <td>
                                             @if($rs->image)

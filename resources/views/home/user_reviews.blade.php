@@ -79,7 +79,7 @@
                                             {{$rs->created_at}}
                                         </td>
                                         <td>
-                                            <a href="{{route('admin_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" style="width: 30px;"></a>
+                                            <a href="{{route('user_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png" style="width: 30px;"></a>
                                         </td>
                                     </tr>
 

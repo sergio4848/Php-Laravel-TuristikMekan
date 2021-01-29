@@ -2,7 +2,7 @@
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
   -->
-    <div class="logo">
+    <div class="logo" style="padding-bottom: 30px;">
         <a href="{{route('admin_home')}}" class="simple-text logo-mini">
             @if(Auth::user()->profile_photo_path)
                 <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="40" style="border-radius: 10px">

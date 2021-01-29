@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', 'About Us')
+@section('title', 'About Us '.$setting->title)
 @include('home._header')
 @section('content')
     <section id="subintro">
