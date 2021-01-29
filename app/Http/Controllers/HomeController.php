@@ -94,6 +94,15 @@ class HomeController extends Controller
         return view('home.place_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
 
     }
+
+    public function allplacelist(){
+        $datalist=Place::all();
+        $setting=Setting::first();
+
+
+        return view('home.allplaces',['datalist'=>$datalist,'setting'=>$setting]);
+
+    }
     public function categoryplaces($id,$slug){
         $datalist=Place::where('category_id',$id)->get();
         $data=Category::find($id);

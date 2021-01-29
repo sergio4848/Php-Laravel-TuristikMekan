@@ -7,6 +7,7 @@
                 @else
                 <a href="/login" class="btn btn-primary btn-large e_wobble">GİRİŞ</a>
                 @endauth
+                    <a href="{{route('allplacelist')}}" class="btn btn-primary btn-large e_pulse">KEŞFET</a>
 
             </div>
             <div class="span8">
